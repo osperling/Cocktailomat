@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891FBF23254B403E008F4497 /* DrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF22254B403E008F4497 /* DrinkVC.swift */; };
+		891FBF26254B4052008F4497 /* GlassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF25254B4052008F4497 /* GlassVC.swift */; };
+		891FBF29254B4063008F4497 /* WifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF28254B4063008F4497 /* WifiVC.swift */; };
+		891FBF2F254B408B008F4497 /* MixVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF2E254B408B008F4497 /* MixVC.swift */; };
 		89658D1B2533982D00867B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1A2533982D00867B89 /* AppDelegate.swift */; };
 		89658D1D2533982D00867B89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1C2533982D00867B89 /* SceneDelegate.swift */; };
 		89658D1F2533982D00867B89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1E2533982D00867B89 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		891FBF22254B403E008F4497 /* DrinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkVC.swift; sourceTree = "<group>"; };
+		891FBF25254B4052008F4497 /* GlassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassVC.swift; sourceTree = "<group>"; };
+		891FBF28254B4063008F4497 /* WifiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiVC.swift; sourceTree = "<group>"; };
+		891FBF2E254B408B008F4497 /* MixVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixVC.swift; sourceTree = "<group>"; };
 		89658D172533982D00867B89 /* Cocktailomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktailomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89658D1A2533982D00867B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89658D1C2533982D00867B89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 				89658D1C2533982D00867B89 /* SceneDelegate.swift */,
 				89658D1E2533982D00867B89 /* ViewController.swift */,
 				89658D202533982D00867B89 /* Main.storyboard */,
+				891FBF2E254B408B008F4497 /* MixVC.swift */,
+				891FBF22254B403E008F4497 /* DrinkVC.swift */,
+				891FBF25254B4052008F4497 /* GlassVC.swift */,
+				891FBF28254B4063008F4497 /* WifiVC.swift */,
 				89658D232533983300867B89 /* Assets.xcassets */,
 				89658D252533983300867B89 /* LaunchScreen.storyboard */,
 				89658D282533983300867B89 /* Info.plist */,
@@ -94,7 +106,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Oliver Sperling";
 				TargetAttributes = {
 					89658D162533982D00867B89 = {
@@ -138,6 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891FBF2F254B408B008F4497 /* MixVC.swift in Sources */,
+				891FBF23254B403E008F4497 /* DrinkVC.swift in Sources */,
+				891FBF26254B4052008F4497 /* GlassVC.swift in Sources */,
+				891FBF29254B4063008F4497 /* WifiVC.swift in Sources */,
 				89658D1F2533982D00867B89 /* ViewController.swift in Sources */,
 				89658D1B2533982D00867B89 /* AppDelegate.swift in Sources */,
 				89658D1D2533982D00867B89 /* SceneDelegate.swift in Sources */,
@@ -192,6 +208,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +269,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
