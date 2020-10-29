@@ -6,7 +6,7 @@ class DrinkVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Zuordnung der Getränke"
+        title = "Zuordnung Getränke"
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
