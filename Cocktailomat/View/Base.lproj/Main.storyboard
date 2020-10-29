@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-6E-RTd">
-                                <rect key="frame" x="0.0" y="124" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="GS7-xJ-28x"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-R1-ddW">
-                                <rect key="frame" x="0.0" y="274" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="318" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="PZz-fK-cK3"/>
                                 </constraints>
@@ -41,6 +41,16 @@
                                 </state>
                                 <connections>
                                     <action selector="ledOffPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vkb-D4-SOo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMa-MN-2K7">
+                                <rect key="frame" x="163" y="575" width="89" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Weiter"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="Ouo-5V-40s" eventType="touchUpInside" id="mdV-B8-zDn"/>
+                                    <segue destination="QdV-kq-ntD" kind="show" id="ohF-wm-1rQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +65,7 @@
                             <constraint firstItem="Eqj-R1-ddW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sd3-hG-RCo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yte-Xk-PNj"/>
                     <connections>
                         <outlet property="led_off" destination="Eqj-R1-ddW" id="wW2-QD-lQe"/>
                         <outlet property="led_on" destination="ydv-6E-RTd" id="P1G-kF-iQB"/>
@@ -461,7 +472,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QdV-kq-ntD" kind="relationship" relationship="rootViewController" id="k0W-So-Zlp"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jl0-gz-uyC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tng-hJ-X1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
