@@ -23,26 +23,27 @@
                                     <constraint firstAttribute="height" constant="308" id="zZ2-pH-vq7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocktailomat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iqc-kB-JWD" userLabel="Cocktailomat">
-                                <rect key="frame" x="110" y="182" width="194" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cocktail (1)" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Zv-pnV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="cocktail (1)" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Zv-pnV">
                                 <rect key="frame" x="226" y="446" width="155" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="196" id="bJ8-XF-525"/>
                                     <constraint firstAttribute="width" constant="155" id="ia6-Sh-Q7y"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocktailomat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-ZA-QbA">
+                                <rect key="frame" x="101.5" y="194" width="211" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="90g-gw-kfm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3ku-vO-MSx"/>
-                            <constraint firstItem="cyD-Zv-pnV" firstAttribute="top" secondItem="iqc-kB-JWD" secondAttribute="bottom" constant="225" id="CSm-3V-cmo"/>
+                            <constraint firstItem="03d-ZA-QbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7OG-5O-RAX"/>
+                            <constraint firstItem="03d-ZA-QbA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="NDE-rp-ozh"/>
+                            <constraint firstItem="03d-ZA-QbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ebX-T3-GH2"/>
                             <constraint firstItem="90g-gw-kfm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="txo-6a-vfD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyD-Zv-pnV" secondAttribute="trailing" constant="33" id="uQW-i7-vNn"/>
                         </constraints>

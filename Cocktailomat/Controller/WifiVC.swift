@@ -6,6 +6,7 @@ class WifiVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "WLAN auswählen"
     }
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {

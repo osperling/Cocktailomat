@@ -1,12 +1,13 @@
 import UIKit
 
-class ViewController: UIViewController {
+class LedVC: UIViewController {
 
     @IBOutlet weak var led_on: UIButton!
     @IBOutlet weak var led_off: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "LED Control"
     }
 
     @IBAction func ledOnPressed(_ sender: UIButton) {

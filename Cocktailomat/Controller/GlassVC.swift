@@ -44,27 +44,27 @@ class GlassVC: UIViewController {
     }
     
     @IBAction func shotButtonPressed(_ sender: UIButton) {
-        switchGlass((sender.titleLabel != nil))
+        switchGlass("shot")
         ausgabe()
     }
     
     @IBAction func smallCocktailButtonPressed(_ sender: UIButton) {
-        switchGlass((sender.titleLabel != nil))
+        switchGlass("smallCocktail")
         ausgabe()
     }
     
     @IBAction func bigCocktailButtonPressed(_ sender: UIButton) {
-        switchGlass((sender.titleLabel != nil))
+        switchGlass("bigCocktail")
         print(sender)
         ausgabe()
     }
     
     @IBAction func shakerButtonPressed(_ sender: UIButton) {
-        switchGlass((sender.titleLabel != nil))
+        switchGlass("shaker")
         ausgabe()
     }
     
-    func switchGlass(_ size: Bool){
+    func switchGlass(_ size: String){
         print(size)
         shot = false
         shotLabel.layer.borderWidth = 0
@@ -79,16 +79,16 @@ class GlassVC: UIViewController {
         shakerLabel.layer.borderWidth = 0
 
         switch size {
-            case shot:
+            case "shot":
                 shot = true
                 shotLabel.layer.borderWidth = 3.0
-            case smallCocktail:
+            case "smallCocktail":
                 smallCocktail = true
                 smallCocktailLabel.layer.borderWidth = 3.0
-            case bigCocktail:
+            case "bigCocktail":
                 bigCocktail = true
                 bigCocktailLabel.layer.borderWidth = 3.0
-            case shaker:
+            case "shaker":
                 shaker = true
                 shakerLabel.layer.borderWidth = 3.0
             default:
