@@ -27,16 +27,16 @@ class GlassVC: UIViewController {
         super.viewDidLoad()
         title = "Größe auswählen"
         
-        shotLabel.layer.borderColor = UIColor.blue.cgColor
+        shotLabel.layer.borderColor = UIColor.white.cgColor
         shotLabel.layer.cornerRadius = 5
         
-        smallCocktailLabel.layer.borderColor = UIColor.blue.cgColor
+        smallCocktailLabel.layer.borderColor = UIColor.white.cgColor
         smallCocktailLabel.layer.cornerRadius = 5
         
-        bigCocktailLabel.layer.borderColor = UIColor.blue.cgColor
+        bigCocktailLabel.layer.borderColor = UIColor.white.cgColor
         bigCocktailLabel.layer.cornerRadius = 5
         
-        shakerLabel.layer.borderColor = UIColor.blue.cgColor
+        shakerLabel.layer.borderColor = UIColor.white.cgColor
         shakerLabel.layer.cornerRadius = 5
     }
     
@@ -81,16 +81,16 @@ class GlassVC: UIViewController {
         switch size {
             case "shot":
                 shot = true
-                shotLabel.layer.borderWidth = 3.0
+                shotLabel.layer.borderWidth = 2
             case "smallCocktail":
                 smallCocktail = true
-                smallCocktailLabel.layer.borderWidth = 3.0
+                smallCocktailLabel.layer.borderWidth = 2
             case "bigCocktail":
                 bigCocktail = true
-                bigCocktailLabel.layer.borderWidth = 3.0
+                bigCocktailLabel.layer.borderWidth = 2
             case "shaker":
                 shaker = true
-                shakerLabel.layer.borderWidth = 3.0
+                shakerLabel.layer.borderWidth = 2
             default:
                 break
         }

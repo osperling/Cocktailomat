@@ -16,22 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="90g-gw-kfm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="90g-gw-kfm">
                                 <rect key="frame" x="62.5" y="294" width="289" height="308"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="289" id="f2m-4f-CK5"/>
                                     <constraint firstAttribute="height" constant="308" id="zZ2-pH-vq7"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="cocktail (1)" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Zv-pnV">
-                                <rect key="frame" x="226" y="446" width="155" height="196"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cocktail (1)" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Zv-pnV">
+                                <rect key="frame" x="226" y="359" width="155" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="196" id="bJ8-XF-525"/>
                                     <constraint firstAttribute="width" constant="155" id="ia6-Sh-Q7y"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cocktailomat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-ZA-QbA">
-                                <rect key="frame" x="101.5" y="194" width="211" height="42"/>
+                                <rect key="frame" x="101.5" y="194" width="211" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5fg-ze-FGV"/>
+                                    <constraint firstAttribute="width" constant="211" id="zi3-06-4QR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -43,8 +47,10 @@
                             <constraint firstItem="90g-gw-kfm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3ku-vO-MSx"/>
                             <constraint firstItem="03d-ZA-QbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7OG-5O-RAX"/>
                             <constraint firstItem="03d-ZA-QbA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="NDE-rp-ozh"/>
+                            <constraint firstItem="03d-ZA-QbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WMO-Yo-fff"/>
+                            <constraint firstItem="90g-gw-kfm" firstAttribute="top" secondItem="03d-ZA-QbA" secondAttribute="bottom" constant="55" id="cF9-fh-Dwf"/>
                             <constraint firstItem="03d-ZA-QbA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ebX-T3-GH2"/>
-                            <constraint firstItem="90g-gw-kfm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="txo-6a-vfD"/>
+                            <constraint firstItem="cyD-Zv-pnV" firstAttribute="top" secondItem="03d-ZA-QbA" secondAttribute="bottom" constant="120" id="rXa-eP-6L4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyD-Zv-pnV" secondAttribute="trailing" constant="33" id="uQW-i7-vNn"/>
                         </constraints>
                     </view>

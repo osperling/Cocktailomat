@@ -12,11 +12,34 @@ class DrinkVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Zuordnung Getränke"
+        updateUI()
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    }
+    
+    func updateUI(){
+        let placeholder = NSAttributedString(string: "Getränk eingeben...",attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         
-        textField1.layer.borderColor = UIColor.lightGray.cgColor
-        textField2.layer.borderColor = UIColor.lightGray.cgColor
-        textField3.layer.borderColor = UIColor.lightGray.cgColor
-        textField4.layer.borderColor = UIColor.lightGray.cgColor
+        textField1.tintColor = UIColor.black
+        textField2.tintColor = UIColor.black
+        textField3.tintColor = UIColor.black
+        textField4.tintColor = UIColor.black
+        
+        textField1.attributedPlaceholder = placeholder
+        textField2.attributedPlaceholder = placeholder
+        textField3.attributedPlaceholder = placeholder
+        textField4.attributedPlaceholder = placeholder
+
+        textField1.setIcon(UIImage(named: "icon_cocktail")!)
+        textField2.setIcon(UIImage(named: "icon_cocktail")!)
+        textField3.setIcon(UIImage(named: "icon_cocktail")!)
+        textField4.setIcon(UIImage(named: "icon_cocktail")!)
+
+        textField1.layer.borderColor = UIColor.black.cgColor
+        textField2.layer.borderColor = UIColor.black.cgColor
+        textField3.layer.borderColor = UIColor.black.cgColor
+        textField4.layer.borderColor = UIColor.black.cgColor
         
         textField1.layer.borderWidth = 1.0
         textField2.layer.borderWidth = 1.0
@@ -27,10 +50,22 @@ class DrinkVC: UIViewController {
         textField2.layer.cornerRadius = 5.0
         textField3.layer.cornerRadius = 5.0
         textField4.layer.cornerRadius = 5.0
+        
+        textField1.backgroundColor = UIColor.white
+        textField2.backgroundColor = UIColor.white
+        textField3.backgroundColor = UIColor.white
+        textField4.backgroundColor = UIColor.white
     }
-    
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-    }
-    
 }
-
+extension UITextField {
+    func setIcon(_ image: UIImage) {
+       let iconView = UIImageView(frame:
+                      CGRect(x: 10, y: 5, width: 20, height: 20))
+       iconView.image = image
+       let iconContainerView: UIView = UIView(frame:
+                      CGRect(x: 20, y: 0, width: 30, height: 30))
+       iconContainerView.addSubview(iconView)
+       leftView = iconContainerView
+       leftViewMode = .always
+    }
+}
