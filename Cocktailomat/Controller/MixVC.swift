@@ -25,22 +25,22 @@ class MixVC: UIViewController {
     
     @IBAction func drinkSlider1ValueChanged(_ sender: UISlider) {
         let x = Int(round(sender.value/5)*5)
-        drinkSlider1Value.text = "\(x)ml"
+        drinkSlider1Value.text = "\(x)%"
     }
     
     @IBAction func drinkSlider2ValueChanged(_ sender: UISlider) {
         let x = Int(round(sender.value/5)*5)
-        drinkSlider2Value.text = "\(x)ml"
+        drinkSlider2Value.text = "\(x)%"
     }
     
     @IBAction func drinkSlider3ValueChanged(_ sender: UISlider) {
         let x = Int(round(sender.value/5)*5)
-        drinkSlider3Value.text = "\(x)ml"
+        drinkSlider3Value.text = "\(x)%"
     }
     
     @IBAction func drinkSlider4ValueChanged(_ sender: UISlider) {
         let x = Int(round(sender.value/5)*5)
-        drinkSlider4Value.text = "\(x)ml"
+        drinkSlider4Value.text = "\(x)%"
     }
     
     func updateUI(){

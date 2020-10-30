@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asj-jm-IQy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QdV-kq-ntD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-6E-RTd">
-                                <rect key="frame" x="0.0" y="168" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="GS7-xJ-28x"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-R1-ddW">
-                                <rect key="frame" x="0.0" y="318" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="274" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="PZz-fK-cK3"/>
                                 </constraints>
@@ -52,7 +52,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Ouo-5V-40s" eventType="touchUpInside" id="mdV-B8-zDn"/>
-                                    <segue destination="QdV-kq-ntD" kind="show" id="ohF-wm-1rQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,14 +96,22 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="QdV-kq-ntD" eventType="touchUpInside" id="Psf-Lb-0Os"/>
-                                    <segue destination="usT-zx-aMz" kind="show" id="qCJ-rh-kaO"/>
+                                    <segue destination="usT-zx-aMz" kind="show" id="AV2-FH-cNt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aufbau der WLAN Verbindung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-4g-ufb">
+                                <rect key="frame" x="53.5" y="435" width="307.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0aG-ya-vKz"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="R7E-4g-ufb" firstAttribute="centerY" secondItem="pgq-SL-pVx" secondAttribute="centerY" id="BIL-zF-xFt"/>
                             <constraint firstItem="pq3-HO-F9n" firstAttribute="centerX" secondItem="pgq-SL-pVx" secondAttribute="centerX" id="UXX-xu-aZa"/>
+                            <constraint firstItem="R7E-4g-ufb" firstAttribute="centerX" secondItem="pgq-SL-pVx" secondAttribute="centerX" id="fGa-fQ-nqT"/>
                             <constraint firstItem="0aG-ya-vKz" firstAttribute="bottom" secondItem="pq3-HO-F9n" secondAttribute="bottom" constant="65" id="oDD-c7-qIo"/>
                         </constraints>
                     </view>
@@ -213,7 +220,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="usT-zx-aMz" eventType="touchUpInside" id="TNG-RN-fgd"/>
-                                    <segue destination="Ouo-5V-40s" kind="show" id="Onn-pW-MxU"/>
+                                    <segue destination="Ouo-5V-40s" kind="show" id="hwY-q1-yE2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -350,7 +357,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Ouo-5V-40s" eventType="touchUpInside" id="1Ra-eg-DLK"/>
-                                    <segue destination="fvY-hk-Pgr" kind="show" id="1CT-uh-gNx"/>
+                                    <segue destination="fvY-hk-Pgr" kind="show" id="h2Q-jj-PuS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -428,7 +435,7 @@
                                                             <action selector="drinkSlider1ValueChanged:" destination="fvY-hk-Pgr" eventType="valueChanged" id="3jY-9D-TLg"/>
                                                         </connections>
                                                     </slider>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H55-os-ets">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H55-os-ets">
                                                         <rect key="frame" x="0.0" y="30" width="230" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -462,7 +469,7 @@
                                                             <action selector="drinkSlider2ValueChanged:" destination="fvY-hk-Pgr" eventType="valueChanged" id="pI1-XY-UMs"/>
                                                         </connections>
                                                     </slider>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW6-No-1G2">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW6-No-1G2">
                                                         <rect key="frame" x="0.0" y="30" width="230" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -496,7 +503,7 @@
                                                             <action selector="drinkSlider3ValueChanged:" destination="fvY-hk-Pgr" eventType="valueChanged" id="nlR-X3-UR2"/>
                                                         </connections>
                                                     </slider>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J50-OA-w18">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J50-OA-w18">
                                                         <rect key="frame" x="0.0" y="30" width="230" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -530,7 +537,7 @@
                                                             <action selector="drinkSlider4ValueChanged:" destination="fvY-hk-Pgr" eventType="valueChanged" id="j2h-n2-tTP"/>
                                                         </connections>
                                                     </slider>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i8-Ir-8Rn">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i8-Ir-8Rn">
                                                         <rect key="frame" x="0.0" y="30" width="230" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -584,7 +591,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jl0-gz-uyC"/>
+                        <segue destination="QdV-kq-ntD" kind="relationship" relationship="rootViewController" id="9vO-WF-60q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tng-hJ-X1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -598,7 +605,7 @@
         <image name="shaker" width="424" height="424"/>
         <image name="shot" width="512" height="512"/>
         <namedColor name="DarkRed">
-            <color red="0.40784313729999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40799999237060547" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightRed">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
