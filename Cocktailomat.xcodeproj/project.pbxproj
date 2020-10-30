@@ -18,6 +18,7 @@
 		89658D222533982D00867B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89658D202533982D00867B89 /* Main.storyboard */; };
 		89658D242533983300867B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89658D232533983300867B89 /* Assets.xcassets */; };
 		89658D272533983300867B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89658D252533983300867B89 /* LaunchScreen.storyboard */; };
+		A4ED6D3B254BEEC1000FCC5D /* CocktailBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED6D3A254BEEC1000FCC5D /* CocktailBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		89658D232533983300867B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89658D262533983300867B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89658D282533983300867B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4ED6D3A254BEEC1000FCC5D /* CocktailBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CocktailBrain.swift; path = ../../../../../../Users/christianschuck/Documents/CocktailBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		A4C1A3B2254B61BF00B9BFF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4ED6D3A254BEEC1000FCC5D /* CocktailBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				89658D1F2533982D00867B89 /* LedVC.swift in Sources */,
 				89658D1B2533982D00867B89 /* AppDelegate.swift in Sources */,
 				8904F354254B5ACF00680A50 /* (null) in Sources */,
+				A4ED6D3B254BEEC1000FCC5D /* CocktailBrain.swift in Sources */,
 				89658D1D2533982D00867B89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +334,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9892H4F24Z;
+				DEVELOPMENT_TEAM = 44K3H45LN8;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sperling.Cocktailomat;
+				PRODUCT_BUNDLE_IDENTIFIER = schuckCocktailomat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -350,13 +354,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9892H4F24Z;
+				DEVELOPMENT_TEAM = 44K3H45LN8;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sperling.Cocktailomat;
+				PRODUCT_BUNDLE_IDENTIFIER = schuckCocktailomat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
