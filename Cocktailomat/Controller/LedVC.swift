@@ -12,7 +12,6 @@ class LedVC: UIViewController {
 
     @IBAction func ledOnPressed(_ sender: UIButton) {
         urlRequest(URL(string: "http://192.168.4.1/led_on")!)
-        print(currentSSIDs());
     }
     
     @IBAction func ledOffPressed(_ sender: UIButton) {
@@ -24,7 +23,7 @@ class LedVC: UIViewController {
             guard let data = data else { return }
             print("The response is : ",String(data: data, encoding: .utf8)!)
             //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) as Any)
-    }
+            }
         task.resume()
     }
 }

@@ -192,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A486CAA6254C2DD900C9A245 /* WifiInfo.swift in Sources */,
 				A4ED6D40254C144A000FCC5D /* CocktailBrain.swift in Sources */,
 				891FBF2F254B408B008F4497 /* MixVC.swift in Sources */,
 				891FBF23254B403E008F4497 /* DrinkVC.swift in Sources */,
@@ -350,7 +349,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cocktailomat/Cocktailomat.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9892H4F24Z;
+				DEVELOPMENT_TEAM = 44K3H45LN8;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,7 +370,7 @@
 				CODE_SIGN_ENTITLEMENTS = Cocktailomat/Cocktailomat.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9892H4F24Z;
+				DEVELOPMENT_TEAM = 44K3H45LN8;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
