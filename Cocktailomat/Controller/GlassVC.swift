@@ -23,6 +23,8 @@ class GlassVC: UIViewController {
     var bigCocktail: Bool = false
     var shaker: Bool = false
     
+    var cb: Cocktailbrain = Cocktailbrain()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Größe auswählen"
@@ -41,6 +43,13 @@ class GlassVC: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        let size = [shot,smallCocktail,bigCocktail,shaker]
+        let ml = [20,100,230,400]
+        for i in 0..<size.count {
+            if size[i] == true {
+                cb.glas = ml[i]
+            }
+        }
     }
     
     @IBAction func shotButtonPressed(_ sender: UIButton) {
@@ -55,7 +64,6 @@ class GlassVC: UIViewController {
     
     @IBAction func bigCocktailButtonPressed(_ sender: UIButton) {
         switchGlass("bigCocktail")
-        print(sender)
         ausgabe()
     }
     
@@ -102,6 +110,13 @@ class GlassVC: UIViewController {
         print("bigCocktail = \(bigCocktail)")
         print("shaker = \(shaker)")
         print()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goMixVC" {
+            let destinationVC = segue.destination as! MixVC
+            destinationVC.cb = self.cb
+        }
     }
 }
 

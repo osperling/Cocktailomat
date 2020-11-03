@@ -96,7 +96,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="QdV-kq-ntD" eventType="touchUpInside" id="Psf-Lb-0Os"/>
-                                    <segue destination="usT-zx-aMz" kind="show" id="AV2-FH-cNt"/>
+                                    <segue destination="usT-zx-aMz" kind="show" identifier="goDrinkVC" id="AV2-FH-cNt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aufbau der WLAN Verbindung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-4g-ufb">
@@ -129,7 +129,7 @@
         <!--DrinkVC-->
         <scene sceneID="D1L-i3-ni4">
             <objects>
-                <viewController id="usT-zx-aMz" customClass="DrinkVC" customModule="Cocktailomat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DrinkVC" id="usT-zx-aMz" customClass="DrinkVC" customModule="Cocktailomat" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vHd-5A-GA5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="usT-zx-aMz" eventType="touchUpInside" id="TNG-RN-fgd"/>
-                                    <segue destination="Ouo-5V-40s" kind="show" id="hwY-q1-yE2"/>
+                                    <segue destination="Ouo-5V-40s" kind="show" identifier="goGlassVC" id="hwY-q1-yE2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -357,7 +357,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Ouo-5V-40s" eventType="touchUpInside" id="1Ra-eg-DLK"/>
-                                    <segue destination="fvY-hk-Pgr" kind="show" id="h2Q-jj-PuS"/>
+                                    <segue destination="fvY-hk-Pgr" kind="show" identifier="goMixVC" id="h2Q-jj-PuS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -407,6 +407,9 @@
                                 <state key="normal" title="Mixen">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="fvY-hk-Pgr" eventType="touchUpInside" id="bTi-2J-6cd"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-JP-eWE">
                                 <rect key="frame" x="28.5" y="272" width="357.5" height="352"/>
@@ -573,6 +576,10 @@
                         <outlet property="drinkSlider3Value" destination="J50-OA-w18" id="iRF-iE-auc"/>
                         <outlet property="drinkSlider4" destination="rmE-cD-e3U" id="4Ng-5n-zbK"/>
                         <outlet property="drinkSlider4Value" destination="9i8-Ir-8Rn" id="yuM-MO-MFX"/>
+                        <outlet property="getraenk1" destination="9Cp-MH-KUx" id="F68-Cr-I6q"/>
+                        <outlet property="getraenk2" destination="1Ou-3G-op8" id="wFN-cI-2Db"/>
+                        <outlet property="getraenk3" destination="Ycd-9T-n2u" id="aTX-nz-SmL"/>
+                        <outlet property="getraenk4" destination="k2L-LV-fPu" id="haM-mf-Etg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWg-Rc-dS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

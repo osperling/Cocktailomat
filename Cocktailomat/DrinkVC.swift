@@ -8,7 +8,7 @@ class DrinkVC: UIViewController {
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField4: UITextField!
-    
+    var cb: Cocktailbrain = Cocktailbrain()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Zuordnung Getränke"
@@ -16,6 +16,10 @@ class DrinkVC: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+//        Werte die in das Cocktailbrain übergeben werden
+        var text = [textField1.text!,textField2.text!,textField3.text!,textField4.text!]
+        print(text)
+        cb.behaelter = text
     }
     
     func updateUI(){
@@ -56,6 +60,12 @@ class DrinkVC: UIViewController {
         textField3.backgroundColor = UIColor.white
         textField4.backgroundColor = UIColor.white
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goGlassVC" {
+            let destinationVC = segue.destination as! GlassVC
+            destinationVC.cb = self.cb
+        }
+    }
 }
 extension UITextField {
     func setIcon(_ image: UIImage) {
@@ -69,3 +79,6 @@ extension UITextField {
        leftViewMode = .always
     }
 }
+
+
+
