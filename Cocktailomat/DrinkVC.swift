@@ -13,6 +13,9 @@ class DrinkVC: UIViewController {
         super.viewDidLoad()
         title = "Zuordnung Getränke"
         updateUI()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
@@ -65,6 +68,10 @@ class DrinkVC: UIViewController {
             let destinationVC = segue.destination as! GlassVC
             destinationVC.cb = self.cb
         }
+    }
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
 extension UITextField {

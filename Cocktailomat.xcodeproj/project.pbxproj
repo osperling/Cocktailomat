@@ -35,7 +35,6 @@
 		89658D232533983300867B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89658D262533983300867B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89658D282533983300867B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89D762D1254C3B2B004B9B54 /* Cocktailomat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cocktailomat.entitlements; sourceTree = "<group>"; };
 		89D762D3254C3B2B004B9B54 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		A4ED6D3F254C144A000FCC5D /* CocktailBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +71,6 @@
 		89658D192533982D00867B89 /* Cocktailomat */ = {
 			isa = PBXGroup;
 			children = (
-				89D762D1254C3B2B004B9B54 /* Cocktailomat.entitlements */,
 				89658D1A2533982D00867B89 /* AppDelegate.swift */,
 				89658D1C2533982D00867B89 /* SceneDelegate.swift */,
 				A4C1A3B2254B61BF00B9BFF8 /* Model */,

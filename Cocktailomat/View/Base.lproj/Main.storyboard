@@ -564,10 +564,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="9ec-D3-iX1"/>
                     <connections>
-                        <outlet property="containerLabel1" destination="wdi-bp-XwG" id="rTV-gx-rmO"/>
-                        <outlet property="containerLabel2" destination="1Ou-3G-op8" id="sWH-Jk-I4e"/>
-                        <outlet property="containerLabel3" destination="Ycd-9T-n2u" id="Z3R-BO-rjZ"/>
-                        <outlet property="containerLabel4" destination="k2L-LV-fPu" id="gZY-0W-LDI"/>
                         <outlet property="drinkSlider1" destination="hKS-Li-Fj5" id="oyI-QY-irG"/>
                         <outlet property="drinkSlider1Value" destination="H55-os-ets" id="Y9x-cq-Vey"/>
                         <outlet property="drinkSlider2" destination="o5I-sy-xgL" id="sqb-wS-P1d"/>

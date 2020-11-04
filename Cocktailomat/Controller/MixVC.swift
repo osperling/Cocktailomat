@@ -7,15 +7,13 @@ class MixVC: UIViewController {
     @IBOutlet weak var drinkSlider3Value: UILabel!
     @IBOutlet weak var drinkSlider4Value: UILabel!
     
-    @IBOutlet weak var containerLabel1: UIStackView!
-    @IBOutlet weak var containerLabel2: UILabel!
-    @IBOutlet weak var containerLabel3: UILabel!
-    @IBOutlet weak var containerLabel4: UILabel!
+   
     
     @IBOutlet weak var drinkSlider1: UISlider!
     @IBOutlet weak var drinkSlider2: UISlider!
     @IBOutlet weak var drinkSlider3: UISlider!
     @IBOutlet weak var drinkSlider4: UISlider!
+    
     @IBOutlet weak var getraenk1: UILabel!
     @IBOutlet weak var getraenk2: UILabel!
     @IBOutlet weak var getraenk3: UILabel!
