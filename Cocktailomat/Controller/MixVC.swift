@@ -7,8 +7,6 @@ class MixVC: UIViewController {
     @IBOutlet weak var drinkSlider3Value: UILabel!
     @IBOutlet weak var drinkSlider4Value: UILabel!
     
-   
-    
     @IBOutlet weak var drinkSlider1: UISlider!
     @IBOutlet weak var drinkSlider2: UISlider!
     @IBOutlet weak var drinkSlider3: UISlider!
@@ -19,7 +17,14 @@ class MixVC: UIViewController {
     @IBOutlet weak var getraenk3: UILabel!
     @IBOutlet weak var getraenk4: UILabel!
     
+    @IBOutlet weak var tfOne: UITextField!
+    @IBOutlet weak var tfTwo: UITextField!
+    @IBOutlet weak var tfThree: UITextField!
+    @IBOutlet weak var tfFour: UITextField!
     
+    let myPickerData = [String](arrayLiteral: "1","2","3","4")
+    var data = "0"
+    var pos = [1,1,1,1]
     
 //    Noch die richtigen Startwerte anlegen
     var values = [0,0,0,0]
@@ -28,11 +33,18 @@ class MixVC: UIViewController {
         super.viewDidLoad()
         title = "Getränk zusammenstellen"
         updateUI()
+        tfOne.text = String(pos[0])
+        tfTwo.text = String(pos[1])
+        tfThree.text = String(pos[2])
+        tfFour.text = String(pos[3])
         print(cb.behaelter[0])
         getraenk1.text = cb.behaelter[0]
         getraenk2.text = cb.behaelter[1]
         getraenk3.text = cb.behaelter[2]
         getraenk4.text = cb.behaelter[3]
+        createPickerView()
+        dismissPickerView()
+
     }
     
     @IBAction func drinkSlider1ValueChanged(_ sender: UISlider) {
@@ -91,6 +103,11 @@ class MixVC: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         print(values)
         cb.fuellung = self.values
+        pos[0] = Int(tfOne.text!)!
+        pos[1] = Int(tfTwo.text!)!
+        pos[2] = Int(tfThree.text!)!
+        pos[3] = Int(tfFour.text!)!
+        cb.pos = self.pos
         var ergebnis = cb.makeCocktail()
         print(cb.fuellungInML)
         print(cb.behaelter)
@@ -107,4 +124,67 @@ class MixVC: UIViewController {
         return false
     }
     
+    func createPickerView() {
+        let thePicker1 = UIPickerView()
+        let thePicker2 = UIPickerView()
+        let thePicker3 = UIPickerView()
+        let thePicker4 = UIPickerView()
+        tfOne.inputView = thePicker1
+        tfTwo.inputView = thePicker2
+        tfThree.inputView = thePicker3
+        tfFour.inputView = thePicker4
+        thePicker1.delegate = self
+        thePicker2.delegate = self
+        thePicker3.delegate = self
+        thePicker4.delegate = self
+        thePicker1.tag=1
+        thePicker2.tag=2
+        thePicker3.tag=3
+        thePicker4.tag=4
+
+    }
+    
+    func dismissPickerView() {
+       let toolBar = UIToolbar()
+       toolBar.sizeToFit()
+       let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
+       toolBar.setItems([button], animated: true)
+       toolBar.isUserInteractionEnabled = true
+       tfOne.inputAccessoryView = toolBar
+       tfTwo.inputAccessoryView = toolBar
+       tfThree.inputAccessoryView = toolBar
+       tfFour.inputAccessoryView = toolBar
+    }
+    @objc func action() {
+          view.endEditing(true)
+    }
+    
+    
+}
+
+extension MixVC: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1 // number of session
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myPickerData.count // number of dropdown items
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return myPickerData[row] // dropdown item
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        data = myPickerData[row] // selected item
+        switch pickerView.tag {
+        case 1:
+            tfOne.text=data
+        case 2:
+            tfTwo.text = data
+        case 3:
+            tfThree.text = data
+        case 4:
+            tfFour.text = data
+        default:
+            print("Error")
+        }
+    }
 }

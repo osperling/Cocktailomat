@@ -12,6 +12,7 @@ struct Cocktailbrain {
     var behaelter = ["","","",""];
     var fuellung = [0,0,0,0]
     var fuellungInML=[0,0,0,0]
+    var pos = [0,0,0,0]
     var glas = 0;
     var connection = false;
     
