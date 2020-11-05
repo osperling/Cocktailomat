@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8904F354254B5ACF00680A50 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		891FBF23254B403E008F4497 /* DrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF22254B403E008F4497 /* DrinkVC.swift */; };
 		891FBF26254B4052008F4497 /* GlassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF25254B4052008F4497 /* GlassVC.swift */; };
 		891FBF29254B4063008F4497 /* WifiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF28254B4063008F4497 /* WifiVC.swift */; };
 		891FBF2F254B408B008F4497 /* MixVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FBF2E254B408B008F4497 /* MixVC.swift */; };
 		89658D1B2533982D00867B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1A2533982D00867B89 /* AppDelegate.swift */; };
-		89658D1D2533982D00867B89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1C2533982D00867B89 /* SceneDelegate.swift */; };
-		89658D1F2533982D00867B89 /* LedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1E2533982D00867B89 /* LedVC.swift */; };
 		89658D222533982D00867B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89658D202533982D00867B89 /* Main.storyboard */; };
 		89658D242533983300867B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89658D232533983300867B89 /* Assets.xcassets */; };
 		89658D272533983300867B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89658D252533983300867B89 /* LaunchScreen.storyboard */; };
 		89D762D4254C3B2B004B9B54 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D762D3254C3B2B004B9B54 /* ExternalAccessory.framework */; };
+		89EE7726255400E4000EFFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1C2533982D00867B89 /* SceneDelegate.swift */; };
 		A4ED6D40254C144A000FCC5D /* CocktailBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED6D3F254C144A000FCC5D /* CocktailBrain.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +28,6 @@
 		89658D172533982D00867B89 /* Cocktailomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocktailomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89658D1A2533982D00867B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89658D1C2533982D00867B89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		89658D1E2533982D00867B89 /* LedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedVC.swift; sourceTree = "<group>"; };
 		89658D212533982D00867B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89658D232533983300867B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89658D262533983300867B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +90,6 @@
 		A4C1A3B0254B616500B9BFF8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				89658D1E2533982D00867B89 /* LedVC.swift */,
 				891FBF2E254B408B008F4497 /* MixVC.swift */,
 				891FBF25254B4052008F4497 /* GlassVC.swift */,
 				891FBF22254B403E008F4497 /* DrinkVC.swift */,
@@ -190,15 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4ED6D40254C144A000FCC5D /* CocktailBrain.swift in Sources */,
 				891FBF2F254B408B008F4497 /* MixVC.swift in Sources */,
 				891FBF23254B403E008F4497 /* DrinkVC.swift in Sources */,
 				891FBF26254B4052008F4497 /* GlassVC.swift in Sources */,
+				A4ED6D40254C144A000FCC5D /* CocktailBrain.swift in Sources */,
+				89EE7726255400E4000EFFC7 /* SceneDelegate.swift in Sources */,
 				891FBF29254B4063008F4497 /* WifiVC.swift in Sources */,
-				89658D1F2533982D00867B89 /* LedVC.swift in Sources */,
 				89658D1B2533982D00867B89 /* AppDelegate.swift in Sources */,
-				8904F354254B5ACF00680A50 /* (null) in Sources */,
-				89658D1D2533982D00867B89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -330,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -344,20 +338,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Cocktailomat/Cocktailomat.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44K3H45LN8;
+				DEVELOPMENT_TEAM = 9892H4F24Z;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = schuck.Cocktailomat;
+				PRODUCT_BUNDLE_IDENTIFIER = sperling.Cocktail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -365,20 +359,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Cocktailomat/Cocktailomat.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44K3H45LN8;
+				DEVELOPMENT_TEAM = 9892H4F24Z;
 				INFOPLIST_FILE = Cocktailomat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = schuck.Cocktailomat;
+				PRODUCT_BUNDLE_IDENTIFIER = sperling.Cocktail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -28,18 +28,7 @@ class GlassVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Größe auswählen"
-        
-        shotLabel.layer.borderColor = UIColor.white.cgColor
-        shotLabel.layer.cornerRadius = 5
-        
-        smallCocktailLabel.layer.borderColor = UIColor.white.cgColor
-        smallCocktailLabel.layer.cornerRadius = 5
-        
-        bigCocktailLabel.layer.borderColor = UIColor.white.cgColor
-        bigCocktailLabel.layer.cornerRadius = 5
-        
-        shakerLabel.layer.borderColor = UIColor.white.cgColor
-        shakerLabel.layer.cornerRadius = 5
+        updateUI()
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
@@ -54,26 +43,25 @@ class GlassVC: UIViewController {
     
     @IBAction func shotButtonPressed(_ sender: UIButton) {
         switchGlass("shot")
-        ausgabe()
+        nextButton.isEnabled = true
     }
     
     @IBAction func smallCocktailButtonPressed(_ sender: UIButton) {
         switchGlass("smallCocktail")
-        ausgabe()
+        nextButton.isEnabled = true
     }
     
     @IBAction func bigCocktailButtonPressed(_ sender: UIButton) {
         switchGlass("bigCocktail")
-        ausgabe()
+        nextButton.isEnabled = true
     }
     
     @IBAction func shakerButtonPressed(_ sender: UIButton) {
         switchGlass("shaker")
-        ausgabe()
+        nextButton.isEnabled = true
     }
     
     func switchGlass(_ size: String){
-        print(size)
         shot = false
         shotLabel.layer.borderWidth = 0
 
@@ -104,12 +92,20 @@ class GlassVC: UIViewController {
         }
     }
     
-    func ausgabe(){
-        print("shot = \(shot)")
-        print("smallCocktail = \(smallCocktail)")
-        print("bigCocktail = \(bigCocktail)")
-        print("shaker = \(shaker)")
-        print()
+    func updateUI(){
+        shotLabel.layer.borderColor = UIColor.white.cgColor
+        shotLabel.layer.cornerRadius = 5
+        
+        smallCocktailLabel.layer.borderColor = UIColor.white.cgColor
+        smallCocktailLabel.layer.cornerRadius = 5
+        
+        bigCocktailLabel.layer.borderColor = UIColor.white.cgColor
+        bigCocktailLabel.layer.cornerRadius = 5
+        
+        shakerLabel.layer.borderColor = UIColor.white.cgColor
+        shakerLabel.layer.cornerRadius = 5
+        
+        nextButton.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

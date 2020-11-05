@@ -17,6 +17,11 @@ class MixVC: UIViewController {
     @IBOutlet weak var getraenk3: UILabel!
     @IBOutlet weak var getraenk4: UILabel!
     
+    @IBOutlet weak var behaelterView1: UIStackView!
+    @IBOutlet weak var behaelterView2: UIStackView!
+    @IBOutlet weak var behaelterView3: UIStackView!
+    @IBOutlet weak var behaelterView4: UIStackView!
+    
     @IBOutlet weak var tfOne: UITextField!
     @IBOutlet weak var tfTwo: UITextField!
     @IBOutlet weak var tfThree: UITextField!
@@ -29,22 +34,25 @@ class MixVC: UIViewController {
 //    Noch die richtigen Startwerte anlegen
     var values = [0,0,0,0]
     var cb: Cocktailbrain = Cocktailbrain()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Getränk zusammenstellen"
-        updateUI()
         tfOne.text = String(pos[0])
         tfTwo.text = String(pos[1])
         tfThree.text = String(pos[2])
         tfFour.text = String(pos[3])
+        
         print(cb.behaelter[0])
+        
         getraenk1.text = cb.behaelter[0]
         getraenk2.text = cb.behaelter[1]
         getraenk3.text = cb.behaelter[2]
         getraenk4.text = cb.behaelter[3]
+        
         createPickerView()
         dismissPickerView()
-
+        updateUI()
     }
     
     @IBAction func drinkSlider1ValueChanged(_ sender: UISlider) {
@@ -55,7 +63,6 @@ class MixVC: UIViewController {
         }else{
             sender.value = Float(values[0])
         }
-        
     }
     
     @IBAction func drinkSlider2ValueChanged(_ sender: UISlider) {
@@ -66,7 +73,6 @@ class MixVC: UIViewController {
         }else{
             sender.value = Float(values[1])
         }
-        
     }
     
     @IBAction func drinkSlider3ValueChanged(_ sender: UISlider) {
@@ -77,20 +83,16 @@ class MixVC: UIViewController {
         }else{
             sender.value = Float(values[2])
         }
-        
-
     }
     
     @IBAction func drinkSlider4ValueChanged(_ sender: UISlider) {
         let x = Int(round(sender.value/5)*5)
         if(sum(valueOld: values[3],valueNew: x)){
-            values[3] = x
             drinkSlider4Value.text = "\(x)%"
+            values[3] = x
         }else{
             sender.value = Float(values[3])
         }
-        
-
     }
     
     func updateUI(){
@@ -98,8 +100,24 @@ class MixVC: UIViewController {
         drinkSlider2.maximumValue = 100
         drinkSlider3.maximumValue = 100
         drinkSlider4.maximumValue = 100
-
+        
+        if(getraenk1.text!.isEmpty){
+            behaelterView1.isHidden = true
+        }
+        
+        if(getraenk2.text!.isEmpty){
+            behaelterView2.isHidden = true
+        }
+        
+        if(getraenk3.text!.isEmpty){
+            behaelterView3.isHidden = true
+        }
+        
+        if(getraenk4.text!.isEmpty){
+            behaelterView4.isHidden = true
+        }
     }
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         print(values)
         cb.fuellung = self.values
@@ -108,15 +126,15 @@ class MixVC: UIViewController {
         pos[2] = Int(tfThree.text!)!
         pos[3] = Int(tfFour.text!)!
         cb.pos = self.pos
-        var ergebnis = cb.makeCocktail()
+        _ = cb.makeCocktail()
         print(cb.fuellungInML)
         print(cb.behaelter)
     }
     
     func sum(valueOld: Int, valueNew: Int) -> Bool {
-        var sum = values[0]+values[1]+values[2]+values[3]
+        let sum = values[0] + values[1] + values[2] + values[3]
         if sum <= 100 {
-            if(sum-valueOld+valueNew <= 100){
+            if(sum - valueOld + valueNew <= 100){
                 return true
             }
             return false
@@ -141,7 +159,6 @@ class MixVC: UIViewController {
         thePicker2.tag=2
         thePicker3.tag=3
         thePicker4.tag=4
-
     }
     
     func dismissPickerView() {
@@ -158,8 +175,6 @@ class MixVC: UIViewController {
     @objc func action() {
           view.endEditing(true)
     }
-    
-    
 }
 
 extension MixVC: UIPickerViewDelegate, UIPickerViewDataSource{

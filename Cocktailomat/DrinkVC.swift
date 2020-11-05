@@ -1,6 +1,6 @@
 import UIKit
 
-class DrinkVC: UIViewController {
+class DrinkVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
     
@@ -8,21 +8,32 @@ class DrinkVC: UIViewController {
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField4: UITextField!
+    
     var cb: Cocktailbrain = Cocktailbrain()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Zuordnung Getränke"
         updateUI()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-
+        
+        textField1.delegate = self
+        textField2.delegate = self
+        textField3.delegate = self
+        textField4.delegate = self
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
 //        Werte die in das Cocktailbrain übergeben werden
-        var text = [textField1.text!,textField2.text!,textField3.text!,textField4.text!]
-        print(text)
-        cb.behaelter = text
+            let text = [textField1.text!,textField2.text!,textField3.text!,textField4.text!]
+            print(text)
+            cb.behaelter = text
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        nextButton.isEnabled = true
+        return true
     }
     
     func updateUI(){
@@ -62,6 +73,8 @@ class DrinkVC: UIViewController {
         textField2.backgroundColor = UIColor.white
         textField3.backgroundColor = UIColor.white
         textField4.backgroundColor = UIColor.white
+        
+        nextButton.isEnabled = false
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goGlassVC" {
