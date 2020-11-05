@@ -76,17 +76,19 @@ class DrinkVC: UIViewController, UITextFieldDelegate {
         
         nextButton.isEnabled = false
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goGlassVC" {
             let destinationVC = segue.destination as! GlassVC
             destinationVC.cb = self.cb
         }
     }
+    
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
 }
+
 extension UITextField {
     func setIcon(_ image: UIImage) {
        let iconView = UIImageView(frame:

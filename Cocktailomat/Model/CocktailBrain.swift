@@ -36,7 +36,7 @@ struct Cocktailbrain {
     mutating func makeCocktail() -> String{
         calcML()
         print(fuellungInML)
-        let res = "http://192.168.4.1/pump?p1=\(fuellungInML[0])_\(pos[0])&p2=\(fuellungInML[1])_\(pos[1])&p3=\(fuellungInML[2])_\(pos[2])&p4=\(fuellungInML[3])_\(pos[3])"
+        let res = "http://192.168.4.1/pump?p1=\(fuellungInML[0])&p2=\(fuellungInML[1])&p3=\(fuellungInML[2])&p4=\(fuellungInML[3])&p1_pos=\(pos[0])&p2_pos=\(pos[1])&p3_pos=\(pos[2])&p4_pos=\(pos[3])"
         print(res)
         return urlRequest(URL(string: res)!)
     }
