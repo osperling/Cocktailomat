@@ -126,7 +126,7 @@ class MixVC: UIViewController {
         pos[2] = Int(tfThree.text!)!
         pos[3] = Int(tfFour.text!)!
         cb.pos = self.pos
-        _ = cb.makeCocktail()
+        cb.makeCocktail()
         print(cb.fuellungInML)
         print(cb.behaelter)
     }

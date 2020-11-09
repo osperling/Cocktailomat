@@ -34,31 +34,37 @@ class GlassVC: UIViewController {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         let size = [shot,smallCocktail,bigCocktail,shaker]
         let ml = [20,100,230,400]
+        
         for i in 0..<size.count {
             if size[i] == true {
                 cb.glas = ml[i]
             }
         }
+        
+        if(shot == true || smallCocktail == true || bigCocktail == true || shaker == true){
+            self.performSegue(withIdentifier: "goMixVC", sender: self)
+        }else{
+            shotButton.flash()
+            smallCocktailButton.flash()
+            bigCocktailButton.flash()
+            shakerButton.flash()
+        }
     }
     
     @IBAction func shotButtonPressed(_ sender: UIButton) {
         switchGlass("shot")
-        nextButton.isEnabled = true
     }
     
     @IBAction func smallCocktailButtonPressed(_ sender: UIButton) {
         switchGlass("smallCocktail")
-        nextButton.isEnabled = true
     }
     
     @IBAction func bigCocktailButtonPressed(_ sender: UIButton) {
         switchGlass("bigCocktail")
-        nextButton.isEnabled = true
     }
     
     @IBAction func shakerButtonPressed(_ sender: UIButton) {
         switchGlass("shaker")
-        nextButton.isEnabled = true
     }
     
     func switchGlass(_ size: String){
@@ -104,15 +110,38 @@ class GlassVC: UIViewController {
         
         shakerLabel.layer.borderColor = UIColor.white.cgColor
         shakerLabel.layer.cornerRadius = 5
-        
-        nextButton.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goMixVC" {
+        if(segue.identifier == "goMixVC") {
             let destinationVC = segue.destination as! MixVC
             destinationVC.cb = self.cb
         }
+    }
+}
+
+extension UIButton {
+    func flash() {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 1
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 2
+        layer.add(flash, forKey: nil)
+    }
+    
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 1
+        pulse.fromValue = 0.98
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = .infinity
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        layer.add(pulse, forKey: nil)
     }
 }
 

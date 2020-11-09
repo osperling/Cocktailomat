@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		89658D242533983300867B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89658D232533983300867B89 /* Assets.xcassets */; };
 		89658D272533983300867B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89658D252533983300867B89 /* LaunchScreen.storyboard */; };
 		89D762D4254C3B2B004B9B54 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D762D3254C3B2B004B9B54 /* ExternalAccessory.framework */; };
+		89E7AA902559489B0077C568 /* Just in Frameworks */ = {isa = PBXBuildFile; productRef = 89E7AA8F2559489B0077C568 /* Just */; };
 		89EE7726255400E4000EFFC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89658D1C2533982D00867B89 /* SceneDelegate.swift */; };
 		A4ED6D40254C144A000FCC5D /* CocktailBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED6D3F254C144A000FCC5D /* CocktailBrain.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E7AA902559489B0077C568 /* Just in Frameworks */,
 				89D762D4254C3B2B004B9B54 /* ExternalAccessory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +133,9 @@
 			dependencies = (
 			);
 			name = Cocktailomat;
+			packageProductDependencies = (
+				89E7AA8F2559489B0077C568 /* Just */,
+			);
 			productName = Cocktailomat;
 			productReference = 89658D172533982D00867B89 /* Cocktailomat.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 89658D0E2533982D00867B89;
+			packageReferences = (
+				89E7AA8E2559489B0077C568 /* XCRemoteSwiftPackageReference "Just" */,
+			);
 			productRefGroup = 89658D182533982D00867B89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89E7AA8E2559489B0077C568 /* XCRemoteSwiftPackageReference "Just" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dduan/Just.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89E7AA8F2559489B0077C568 /* Just */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89E7AA8E2559489B0077C568 /* XCRemoteSwiftPackageReference "Just" */;
+			productName = Just;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89658D0F2533982D00867B89 /* Project object */;
 }

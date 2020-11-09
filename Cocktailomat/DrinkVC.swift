@@ -25,14 +25,20 @@ class DrinkVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-//        Werte die in das Cocktailbrain übergeben werden
-            let text = [textField1.text!,textField2.text!,textField3.text!,textField4.text!]
-            print(text)
-            cb.behaelter = text
+        //Werte die in das Cocktailbrain übergeben werden
+        let text = [textField1.text!,textField2.text!,textField3.text!,textField4.text!]
+        cb.behaelter = text
+        if(textField1.text == "" && textField2.text == "" && textField3.text == "" && textField4.text == ""){
+            textField1.flash()
+            textField2.flash()
+            textField3.flash()
+            textField4.flash()
+        }else{
+            performSegue(withIdentifier: "goGlassVC", sender: self)
+        }
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        nextButton.isEnabled = true
         return true
     }
     
@@ -73,8 +79,6 @@ class DrinkVC: UIViewController, UITextFieldDelegate {
         textField2.backgroundColor = UIColor.white
         textField3.backgroundColor = UIColor.white
         textField4.backgroundColor = UIColor.white
-        
-        nextButton.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -99,6 +103,17 @@ extension UITextField {
        iconContainerView.addSubview(iconView)
        leftView = iconContainerView
        leftViewMode = .always
+    }
+    
+    func flash() {
+        let flash = CABasicAnimation(keyPath: "opacity")
+        flash.duration = 0.3
+        flash.fromValue = 1
+        flash.toValue = 0.1
+        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        flash.autoreverses = true
+        flash.repeatCount = 2
+        layer.add(flash, forKey: nil)
     }
 }
 

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="asj-jm-IQy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,11 +25,10 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="QdV-kq-ntD" eventType="touchUpInside" id="Psf-Lb-0Os"/>
-                                    <segue destination="usT-zx-aMz" kind="show" identifier="goDrinkVC" id="AV2-FH-cNt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aufbau der WLAN Verbindung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-4g-ufb">
-                                <rect key="frame" x="53.5" y="435" width="307.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte verbinden Sie sich mit dem WLAN &quot;nodemcu&quot;." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-4g-ufb">
+                                <rect key="frame" x="20" y="338" width="374" height="53"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,10 +37,12 @@
                         <viewLayoutGuide key="safeArea" id="0aG-ya-vKz"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="R7E-4g-ufb" firstAttribute="centerY" secondItem="pgq-SL-pVx" secondAttribute="centerY" id="BIL-zF-xFt"/>
+                            <constraint firstItem="R7E-4g-ufb" firstAttribute="top" secondItem="0aG-ya-vKz" secondAttribute="top" constant="250" id="OBO-CW-N6Q"/>
                             <constraint firstItem="pq3-HO-F9n" firstAttribute="centerX" secondItem="pgq-SL-pVx" secondAttribute="centerX" id="UXX-xu-aZa"/>
+                            <constraint firstItem="R7E-4g-ufb" firstAttribute="leading" secondItem="pgq-SL-pVx" secondAttribute="leading" constant="20" id="Yt2-76-RmE"/>
                             <constraint firstItem="R7E-4g-ufb" firstAttribute="centerX" secondItem="pgq-SL-pVx" secondAttribute="centerX" id="fGa-fQ-nqT"/>
                             <constraint firstItem="0aG-ya-vKz" firstAttribute="bottom" secondItem="pq3-HO-F9n" secondAttribute="bottom" constant="65" id="oDD-c7-qIo"/>
+                            <constraint firstAttribute="trailing" secondItem="R7E-4g-ufb" secondAttribute="trailing" constant="20" id="rKl-RO-tXx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xZc-53-EsD">
@@ -51,6 +51,7 @@
                     <connections>
                         <outlet property="nextButton" destination="pq3-HO-F9n" id="DOk-B7-MMX"/>
                         <outlet property="wifiLabel" destination="R7E-4g-ufb" id="oYf-7c-RQj"/>
+                        <segue destination="usT-zx-aMz" kind="show" identifier="goDrinkVC" id="VWz-6q-cau"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fwx-2F-dbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,7 +147,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="usT-zx-aMz" eventType="touchUpInside" id="TNG-RN-fgd"/>
-                                    <segue destination="Ouo-5V-40s" kind="show" identifier="goGlassVC" id="hwY-q1-yE2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -170,6 +170,7 @@
                         <outlet property="textField2" destination="Z4k-Hx-7xk" id="0QJ-Hn-uNV"/>
                         <outlet property="textField3" destination="0tq-pZ-RfP" id="xrh-dx-JtD"/>
                         <outlet property="textField4" destination="utO-e3-bgC" id="m1R-LV-BTj"/>
+                        <segue destination="Ouo-5V-40s" kind="show" identifier="goGlassVC" id="IqZ-X2-So7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ4-g2-FNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -283,7 +284,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Ouo-5V-40s" eventType="touchUpInside" id="1Ra-eg-DLK"/>
-                                    <segue destination="fvY-hk-Pgr" kind="show" identifier="goMixVC" id="h2Q-jj-PuS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -313,6 +313,7 @@
                         <outlet property="smallCocktailButton" destination="VJS-qR-mE8" id="pc2-9f-GWJ"/>
                         <outlet property="smallCocktailLabel" destination="UHf-Og-Vg8" id="Ila-zc-kOF"/>
                         <outlet property="smallCocktailView" destination="1JB-ts-tX7" id="yD4-qp-Ovw"/>
+                        <segue destination="fvY-hk-Pgr" kind="show" identifier="goMixVC" id="kOe-uY-kdz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyI-B9-nic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
